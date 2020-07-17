@@ -4,9 +4,136 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+  <body class="page__body">
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img src="https://via.placeholder.com/86x35" alt="Логотип">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="catalog.html">
+                Каталог товаров
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                Вязание на заказ
+              </a>
+            </li>
+            <li class="site-list__item">
+              <form action="https://echo.htmlacademy.ru" method="post" class="search-form">
+                <label>
+                  <span class="visually-hidden">Поле поиска</span>
+                  <input class="" type="search" name="search" id="search-form" placeholder="Поиск по сайту">
+                </label>
+                <button class="visually-hidden" type="button">Искать</button>
+              </form>
+            </li>
+            <li>
+              <a href="#">
+                Корзина: <span>пока пуста</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">Интернет-магазин игрушек ручной работы</h1>
+      <section class="features">
+        <header class="features-header">
+          <h2 class="features-header__title">Милые штуки ручной работы для дома</h2>
+          <a href="#" class="features__link features__link--interior">Предметы интерьера</a>
+          <a href="#" class="features__link features__link--toys">Детские игрушки</a>
+        </header>
+        <div class="features__item product">
+          <h3 class="product__title">Вязаные корзинки</h3>
+          <span class="product-of-the-week">Товар недели</span>
+          <p class="product__description">
+            Экологически чистая пряжа,
+            ручная работа. Доступны в шести расцветках, и трех размерах.
+          </p>
+          <table class="product__details">
+            <tr>
+              <td>Цвет: </td>
+              <td>&quot;Тиффани&quot;/серый</td>
+            </tr>
+            <tr>
+              <td>Диаметр: </td>
+              <td>25 см</td>
+            </tr>
+            <tr>
+              <td>Высота: </td>
+              <td>15 см</td>
+            </tr>
+          </table>
+          <img src="https://via.placeholder.com/260x315" alt="Фото вязаной корзинки">
+          <p class="product__price">Цена: 990 руб.</p>
+          <a href="#" class="button">Заказать</a>
+        </div>
+      </section>
+      <section class="advantages">
+        <h2 class="advantages__title">Коротко о нас:</h2>
+        <ul class="advantages_list">
+          <li class="advantages__item advantages__item--eco">Экологически чистые материалы</li>
+          <li class="advantages__item advantages__item--price">Скандинавский стиль по российской цене</li>
+          <li class="advantages__item advantages__item--likes">Увеличивает лайки на фотографиях</li>
+          <li class="advantages__item advantages__item--handmade">Связано вручную с любовью и умилением</li>
+          <li class="advantages__item advantages__item--support">Поддержка отечественного производителя</li>
+          <li class="advantages__item advantages__item--gift">Поставляется в подарочной упаковке</li>
+        </ul>
+      </section>
+      <section class="reviews">
+        <h2 class="reviews__title">Отзывы</h2>
+        <blockquote class="reviews__item"></blockquote>
+        <p class="reviews__text">
+          Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+        </p>
+        <p class="reviews__author">Анастасия Красильникова</p>
+        <span class="author-email">@misssssiskras</span>
+        <a href="#" class="reviews__button reviews__button--prev"><span class="visually-hidden">Предыдущий отзыв</span></a>
+        <a href="#" class="reviews__button reviews__button--next"><span class="visually-hidden">Следующий отзыв</span></a>
+        <a class="button">Написать</a>
+      </section>
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <dl class="contacts__info">
+          <dt>e-mail:</dt>
+          <dd>info@mimimishkashop.ru</dd>
+          <dt>адрес:</dt>
+          <dd>Санкт-Петербург, ул. Большая Конюшенная,  д. 19/8, офис 101</dd>
+        </dl>
+        <img src="https://via.placeholder.com/322x457" alt="Карта">
+        <a href="" class="button">Напишите нам</a>
+      </section>
+      <footer class="page-footer">
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a href="#" class="social__link social__link--instagram">
+              <span class="visually-hidden">Инстаграмм</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--facebook">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--twitter">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__item copyright">
+          <span class="copyright__text">Разработано</span>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
+            <img src="https://via.placeholder.com/27x35" alt="Логотип HTML Academy">
+          </a>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>

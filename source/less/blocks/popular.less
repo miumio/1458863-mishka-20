@@ -1,22 +1,23 @@
 .popular {
   padding: 36px 18px;
-  &__title {
-    margin: 0;
-    font-size: 25px;
-    line-height: 30px;
-    color: #000;
-  }
-  &__of-the-week {
-    text-transform: uppercase;
-    color: @green;
-  }
-  &__price,
-  &__of-the-week {
-    font-size: 17px;
-    line-height: 24px;
-    font-weight: 700;
-  }
   background: url("../img/bg-zigzag-line.svg") no-repeat bottom;
+}
+
+.popular__title {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000;
+}
+
+.popular__of-the-week {
+  text-transform: uppercase;
+  color: @green;
+}
+
+.popular__price,
+.popular__of-the-week {
+  .font(17px; 24px; 700);
 }
 
 .popular__details {

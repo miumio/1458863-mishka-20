@@ -4,14 +4,16 @@
   position: relative;
   padding: 0;
   list-style: none;
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: -60px;
-    width: 260px;
-    height: 1px;
-    background-color: #E5E5E5;
+  @media (max-width: @mobile-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: -60px;
+      width: 260px;
+      height: 1px;
+      background-color: #E5E5E5;
+    }
   }
 }
 

@@ -1,14 +1,13 @@
 .product-card {
   @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    max-width: 668px;
+    margin: 0 auto;
   }
 }
 
-.product-card__img {
+.product-card__img img {
   display: block;
-  margin: 0;
 }
 
 .product-card__info {

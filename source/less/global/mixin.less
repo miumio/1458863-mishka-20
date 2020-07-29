@@ -9,3 +9,20 @@
     line-height: @height;
     font-weight: @weight;
 }
+
+.container() {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 260px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+    max-width: 668px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1050px;
+    margin-left: 125px;
+
+  }
+}

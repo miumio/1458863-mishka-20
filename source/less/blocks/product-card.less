@@ -1,6 +1,9 @@
 .product-card {
-  position: relative;
-  font-size: 13px;
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .product-card__img {
@@ -20,9 +23,20 @@
   margin: 0;
   .font(17px; 24px; 700);
   color: #000;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .product-card__price {
-  font-size: 15px;
-  font-weight: 700;
+  .font(15px; 24px; 700);
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
+}
+
+.product-card__description {
+  @media (max-width: @mobile-width) {
+    font-size: 13px;
+  }
 }

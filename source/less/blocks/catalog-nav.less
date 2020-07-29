@@ -1,6 +1,17 @@
+.catalog-nav {
+  position: relative;
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &::before {
+      position: absolute;
+    }
+  }
+}
+
 .catalog-nav__link {
   display: block;
-  padding: 24px 160px 31px 18px;
+  padding: 24px 160px 31px 30px;
   .font(19px; 24px; 700);
   text-decoration: none;
   color: #fff;
@@ -11,5 +22,9 @@
 
   &--toys {
     background-color: @darkgreen;
+  }
+
+  @media (min-width: @tablet-width) {
+    .font (20px; 30px; 700);
   }
 }

@@ -1,4 +1,5 @@
 .intro {
+  position: relative;
   background: url("../img/hero-mobile@1x.jpg") no-repeat top;
 }
 
@@ -6,15 +7,32 @@
   padding-top: 75px;
 }
 
+.intro__shipping {
+  position: absolute;
+  top: 0;
+  right: 30px;
+@media (max-width: @mobile-width) {
+  opacity: 0;
+  }
+}
 .intro__nav {
   .list-reset();
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
 }
 
 .intro__title {
+  .font(27px; 30px; 700);
   margin: 0 auto 120px;
-  font-size: 27px;
-  line-height: 30px;
-  font-weight: 700;
+  width: 260px;
   text-align: center;
   color: #000;
+  @media (min-width: @tablet-width) {
+    .font(43px; 50px; 700);
+    width: auto;
+  }
+  @media (min-width: @desktop-width) {
+    .font(53px; 57px; 700);
+  }
 }

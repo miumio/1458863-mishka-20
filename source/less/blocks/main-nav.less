@@ -3,31 +3,6 @@
   min-height: 51px;
 }
 
-.main-nav__toggle {
-  position: absolute;
-  top: 32px;
-  right: 31px;
-  width: 20px;
-  height: 14px;
-  z-index: 2;
-  display: block;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20px;
-    height: 2px;
-    background-color: @black;
-    box-shadow:
-    0 6px 0 0 @black,
-    0 12px 0 0 @black;
-  }
-}
-
 @media (min-width: @tablet-width) {
   .main-nav__toggle {
     display: none;

@@ -10,11 +10,7 @@
 }
 
 .catalog-nav__link {
-  display: block;
-  padding: 24px 160px 31px 30px;
   .font(19px; 24px; 700);
-  text-decoration: none;
-  color: #fff;
 
   &--interior {
     background-color: @green;
@@ -26,5 +22,18 @@
 
   @media (min-width: @tablet-width) {
     .font (20px; 30px; 700);
+  }
+
+  a {
+    display: block;
+    width: 320px;
+    padding: 24px 160px 31px 30px;
+    color: #FFFFFF;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    @media (max-width: @mobile-width) {
+      margin: 0 auto;
+    }
   }
 }

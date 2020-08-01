@@ -5,13 +5,13 @@
 
 .intro__wrapper {
   padding-top: 75px;
+  @media (min-width: @tablet-width) {
+    .container();
+  }
 }
 
 .intro__nav {
   .list-reset();
-  @media (min-width: @tablet-width) {
-    margin: 0 30px;
-  }
 }
 
 .intro__title {
@@ -21,6 +21,7 @@
   text-align: center;
   color: #000;
   @media (min-width: @tablet-width) {
+    padding-top: 80px;
     .font(43px; 50px; 700);
     width: auto;
   }

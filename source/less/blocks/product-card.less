@@ -1,8 +1,8 @@
 .product-card {
   @media (min-width: @tablet-width) and (max-width: @desktop-width) {
     display: flex;
-    max-width: 668px;
-    margin: 0 auto;
+    width: 668px;
+    margin: 0 auto 54px;
   }
 }
 
@@ -14,10 +14,16 @@
   margin: 0;
   padding: 28px;
   border: 1px solid #ECECEC;
+
   a {
     text-decoration: none;
   }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    width: 335px;
+  }
 }
+
 .product-card__title {
   margin: 0;
   .font(17px; 24px; 700);

@@ -1,14 +1,10 @@
 .popular {
-  position: relative;
-  padding: 36px 18px;
-  @media (max-width: @mobile-width) {
-    background: url("../img/bg-zigzag-line.svg") no-repeat bottom;
-  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 30px;
+    margin: 54px 0;
     padding: 0;
   }
 }
@@ -20,9 +16,15 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
-    padding-right: calc(50% + 50px);
-    min-height: 400px;
+    min-height: 495px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 185px;
+    box-sizing: border-box;
+    min-height: 635px;
   }
 }
 
@@ -40,48 +42,69 @@
     position: absolute;
     top: 90px;
     right: 50px;
-    width: 45%;
-    height: 100%;
-    min-height: 300px;
+    width: 335px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 525px;
   }
 }
 
 .popular__title {
   .font(25px; 30px; 700);
-  margin: 0;
+  margin: 25px 0 0 0;
   color: #000;
   @media (min-width: @tablet-width) {
     .font(43px; 50px; 700);
-    position: absolute;
-    top: 0;
-    left: 50px;
+    margin: 0;
   }
   @media (min-width: @desktop-width) {
     .font(53px; 57px; 700);
   }
 }
 
+.popular__title-block {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
 .popular__subtitle {
   text-transform: uppercase;
   color: @green;
+
   @media (min-width: @tablet-width) {
-    position: absolute;
-    right: 50px;
     width: 100px;
     text-align: center;
   }
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 5px;
-    left: -90px;
+    left: -5px;
   }
 }
 
 .popular__description {
-  @media (min-width: @tablet-width) {
-    margin-top: 80px;
+  margin: 0;
+  box-sizing: border-box;
 
+  @media (min-width: @tablet-width) {
+    padding-right: 375px;
+    font-size: 17px;
+    line-height: 30px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 555px;
+  }
+
+
 }
 
 .popular__price,
@@ -91,6 +114,7 @@
 }
 
 .popular__details {
+  margin-top: 30px;
   margin-bottom: 20px;
   tr {
     border-bottom: 1px solid #ECECEC;

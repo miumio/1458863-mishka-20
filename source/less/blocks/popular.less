@@ -1,29 +1,128 @@
 .popular {
-  padding: 36px 18px;
-  background: url("../img/bg-zigzag-line.svg") no-repeat bottom;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 54px 0;
+    padding: 0;
+  }
+}
+
+.popular__wrapper {
+  .container();
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 495px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 185px;
+    box-sizing: border-box;
+    min-height: 635px;
+  }
+}
+
+.popular__img {
+  margin-bottom: 20px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 90px;
+    right: 50px;
+    width: 333px;
+    height: 404px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 525px;
+    height: 636px;
+  }
 }
 
 .popular__title {
-  margin: 0;
-  font-size: 25px;
-  line-height: 30px;
-  color: #000;
+  .font(25px; 30px; 700);
+  margin: 25px 0 0 0;
+  color: #000000;
+
+  @media (min-width: @tablet-width) {
+    .font(43px; 50px; 700);
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .font(53px; 57px; 700);
+  }
 }
 
-.popular__of-the-week {
+.popular__title-block {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+.popular__subtitle {
   text-transform: uppercase;
   color: @green;
+
+  @media (min-width: @tablet-width) {
+    width: 100px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 5px;
+    left: -5px;
+  }
+}
+
+.popular__description {
+  margin: 0;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 375px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 555px;
+  }
 }
 
 .popular__price,
-.popular__of-the-week {
+.popular__subtitle {
   .font(17px; 24px; 700);
+  z-index: 100;
 }
 
 .popular__details {
+  margin-top: 30px;
+  margin-bottom: 20px;
+
   tr {
-    border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px solid #ececec;
   }
+
   th {
     font-weight: 400;
     text-align: left;

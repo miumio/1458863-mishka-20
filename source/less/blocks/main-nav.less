@@ -1,7 +1,20 @@
-.main-nav__list {
-  .list-reset(0; 0; none);
+.main-nav {
+  position: relative;
+  min-height: 51px;
 }
 
-.main-nav__toggle {
-  display: none;
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  .list-reset();
+}
+
+.main-nav__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }

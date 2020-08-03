@@ -1,13 +1,37 @@
+.catalog__wrapper {
+  .container();
+}
+
 .catalog__title {
+  .font(27px; 30px; 700);
   margin: 0;
   padding: 73px 18px;
   display: block;
   text-align: center;
   background-color: @lightgrey;
+
+  @media (min-width: @tablet-width) {
+    .font(43px; 50px; 700);
+  }
+
+  @media (min-width: @desktop-width) {
+    .font(53px; 57px; 700)
+  }
 }
 
 .catalog__list {
-  margin: 30px;
   padding: 0;
   list-style: none;
+  margin-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 52px;
+    margin-top: 111px;
+  }
 }

@@ -1,9 +1,18 @@
+.catalog-nav {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &::before {
+      position: absolute;
+    }
+  }
+}
+
 .catalog-nav__link {
-  display: block;
-  padding: 24px 160px 31px 18px;
   .font(19px; 24px; 700);
-  text-decoration: none;
-  color: #fff;
 
   &--interior {
     background-color: @green;
@@ -11,5 +20,26 @@
 
   &--toys {
     background-color: @darkgreen;
+  }
+
+  @media (min-width: @tablet-width) {
+    .font (20px; 30px; 700);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  span {
+    display: block;
+    width: 320px;
+    padding: 24px 160px 31px 30px;
+    color: #ffffff;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    @media (max-width: @mobile-width) {
+      margin: 0 auto;
+    }
   }
 }

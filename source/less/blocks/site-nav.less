@@ -1,0 +1,130 @@
+.site-nav {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.site-nav__list {
+  .font(17px; 24px; 700);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 100;
+
+  @media (max-width: @mobile-width) {
+    li {
+      border-bottom: 1px solid #ececec;
+    }
+
+    a {
+      margin: 0 auto;
+      width: 260px;
+      padding: 27px 8px 27px 52px;
+    }
+
+    svg {
+      margin-left: -40px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    li {
+      margin: 22px 0;
+    }
+  }
+
+  &--user {
+    @media (min-width: @tablet-width) {
+      order: -1;
+      flex: none;
+      justify-content: flex-end;
+      align-content: center;
+      margin-left: auto;
+      width: calc(100% - 120px);
+
+      a {
+        padding-left: 20px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      width: calc(50% - 80px);
+    }
+
+    svg {
+      margin-right: 25px;
+      opacity: 0.2;
+
+      &:hover {
+        fill: @green;
+        opacity: 1;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--catalog {
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+      flex: none;
+      width: 50%;
+      max-height: 0;
+      font-size: 15px;
+    }
+
+    @media (min-width: @desktop-width) {
+      order: -2;
+      width: calc(50% - 80px);
+      max-height: none;
+    }
+  }
+
+  &--deals {
+    display: none;
+    font-size: 15px;
+    margin-right: auto;
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      max-height: 0;
+      width: calc(50% - 138px);
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    min-height: 24px;
+    color: @black;
+    text-decoration: none;
+  }
+}
+
+.site-nav__note {
+  display: none;
+  width: 50%;
+  max-height: 0;
+  text-align: right;
+  z-index: 100;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  p {
+    margin-top: 18px;
+  }
+}

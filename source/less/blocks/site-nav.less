@@ -21,7 +21,7 @@
     a {
       margin: 0 auto;
       width: 260px;
-      padding: 27px 33px 27px 56px;
+      padding: 27px 8px 27px 52px;
     }
 
     svg {
@@ -31,7 +31,13 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+
+
+    li {
+      margin: 22px 0;
+    }
   }
 
   &--user {
@@ -77,10 +83,6 @@
       width: 50%;
       max-height: 0;
       font-size: 15px;
-
-      a {
-        margin-top: 40px;
-      }
     }
 
     @media (min-width: @desktop-width) {
@@ -99,10 +101,6 @@
       display: flex;
       max-height: 0;
       width: calc(50% - 138px);
-    }
-
-    a {
-      margin-top: 40px;
     }
   }
 
@@ -127,6 +125,6 @@
   }
 
   p {
-    margin-top: 38px;
+    margin-top: 18px;
   }
 }

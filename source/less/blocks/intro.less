@@ -2,6 +2,25 @@
   position: relative;
   background: url("../img/hero-mobile@1x.jpg") no-repeat top;
   background-color: #f9f9f9;
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      position: absolute;
+      bottom: -12px;
+      left: -11px;
+      content: "";
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: 770px;
+
+      @media (min-width: @desktop-width) {
+        bottom: -5px;
+        left: -24px;
+        background-size: 1250px;
+      }
+    }
+  }
 }
 
 .intro__wrapper {

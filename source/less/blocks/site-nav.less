@@ -13,19 +13,20 @@
   list-style: none;
   z-index: 100;
 
-  @media (max-width: @mobile-width) {
-    li {
-      border-bottom: 1px solid #ececec;
-    }
+  li {
+    border-bottom: 1px solid #ececec;
+  }
 
+  svg {
+    margin-left: -45px;
+  }
+
+  @media (max-width: @mobile-width) {
     a {
       margin: 0 auto;
       width: 260px;
-      padding: 27px 8px 27px 52px;
-    }
-
-    svg {
-      margin-left: -40px;
+      padding: 29px 15px 25px 45px;
+      box-sizing: border-box;
     }
   }
 
@@ -34,34 +35,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-
-    li {
-      margin: 22px 0;
+    a {
+      width: auto;
     }
   }
 
   &--user {
-    @media (min-width: @tablet-width) {
-      order: -1;
-      flex: none;
-      justify-content: flex-end;
-      align-content: center;
-      margin-left: auto;
-      width: calc(100% - 120px);
-
-      a {
-        padding-left: 20px;
-      }
-
-      span {
-        display: none;
-      }
-    }
-
-    @media (min-width: @desktop-width) {
-      width: calc(50% - 80px);
-    }
-
     svg {
       margin-right: 25px;
       opacity: 0.2;
@@ -75,9 +54,48 @@
         opacity: 0.3;
       }
     }
+
+    @media (min-width: @tablet-width) {
+      order: -1;
+      flex: none;
+      justify-content: flex-end;
+      align-items: center;
+      margin-left: auto;
+      width: calc(100% - 120px);
+
+      li {
+        border-left: 1px solid #ececec;
+        border-bottom: none;
+        padding: 33px 0 30px 73px;
+      }
+
+      span {
+        opacity: 0;
+        width: 1px;
+        height: 1px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      width: calc(50% - 80px);
+
+      svg {
+        margin-right: 35px;
+      }
+    }
   }
 
   &--catalog {
+    @media (min-width: @tablet-width) {
+      a {
+        padding: 20px 30px 20px 0;
+      }
+
+      li {
+        border: none;
+      }
+    }
+
     @media (min-width: @tablet-width) and (max-width: @desktop-width) {
       flex: none;
       width: 50%;
@@ -87,8 +105,16 @@
 
     @media (min-width: @desktop-width) {
       order: -2;
-      width: calc(50% - 80px);
+      width: calc(50% - 120px);
       max-height: none;
+
+      a {
+        padding: 33px 30px 30px 0;
+      }
+
+      li:nth-child(1) {
+        border-right: 1px solid #ececec;
+      }
     }
   }
 
@@ -100,7 +126,14 @@
     @media (min-width: @desktop-width) {
       display: flex;
       max-height: 0;
-      width: calc(50% - 138px);
+
+      li {
+        border: none;
+      }
+
+      a {
+        padding: 20px 60px 0 0;
+      }
     }
   }
 
@@ -126,5 +159,6 @@
 
   p {
     margin-top: 18px;
+    margin-left: auto;
   }
 }

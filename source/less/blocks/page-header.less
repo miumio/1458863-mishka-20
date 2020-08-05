@@ -60,6 +60,10 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__nav--closed .page-header__toggler::after {
@@ -88,8 +92,8 @@
     content: "";
     position: absolute;
     top: 5px;
-    right: 0;
-    width: 25px;
+    right: -3px;
+    width: 26px;
     height: 2px;
     background-color: @black;
   }

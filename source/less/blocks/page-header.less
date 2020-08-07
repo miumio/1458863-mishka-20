@@ -1,15 +1,6 @@
-.page-header {
-  @media (min-width: @tablet-width) {
-    border-bottom: 1px solid #ececec;
-  }
-}
-
 .page-header__wrapper {
   position: relative;
-
-  @media (min-width: @tablet-width) {
-    .container();
-  }
+  .container();
 }
 
 .page-header__top {
@@ -17,7 +8,6 @@
   display: flex;
   justify-content: center;
   padding: 22px 0 12px;
-  border-bottom: 1px solid #ececec;
 
   @media (min-width: @tablet-width) {
     position: absolute;
@@ -40,6 +30,14 @@
   margin: 0 auto;
   text-align: center;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     width: 100%;
 
@@ -47,12 +45,16 @@
       margin-top: -5px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -15px;
+  }
 }
 
 .page-header__toggler {
   position: absolute;
-  top: 39px;
-  right: 25%;
+  top: 50%;
+  right: 30px;
   transform: translateY(-50%);
   width: 20px;
   height: 14px;

@@ -5,11 +5,11 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
-const csso = require('gulp-csso');
+const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const svgstore = require("gulp-svgstore");
-const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
 const del = require("del");
 
 // Styles
@@ -22,6 +22,7 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
@@ -37,17 +38,19 @@ const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
+      imagemin.mozjpeg({quality: 75, progressive: true}),
       imagemin.svgo()
       ]))
 }
+
+exports.images = images;
 
 //Webp
 
 const webpp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.webpp = webpp;
@@ -68,7 +71,7 @@ exports.sprite = sprite;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -97,7 +100,8 @@ const copy = () => {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source/*.ico"
+    "source/*.ico",
+    "source/*.html"
     ], {
       base: "source"
     })
@@ -112,12 +116,22 @@ const clean = () => {
   return del("build");
 };
 
+exports.clean = clean;
+
+
 //Build
 
 const build = () => gulp.series(
   "clean",
   "copy",
-  "css",
-  "sprite",
-  "html"
+  "styles",
+  "sprite"
   );
+
+exports.build = gulp.series(
+  clean,
+  copy,
+  styles,
+  sprite
+);
+

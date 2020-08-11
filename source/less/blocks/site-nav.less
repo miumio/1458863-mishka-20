@@ -42,17 +42,8 @@
 
   &--user {
     svg {
-      margin-right: 25px;
+      margin-right: 27px;
       opacity: 0.2;
-
-      &:hover {
-        fill: @green;
-        opacity: 1;
-      }
-
-      &:active {
-        opacity: 0.3;
-      }
     }
 
     @media (min-width: @tablet-width) {
@@ -66,13 +57,26 @@
       li {
         border-left: 1px solid #ececec;
         border-bottom: none;
-        padding: 33px 0 30px 73px;
+      }
+
+      a {
+        padding: 33px 0 30px 82px;
+
+        &:hover svg {
+          fill: @green;
+          opacity: 1;
+        }
+
+        &:active svg {
+          opacity: 0.3;
+        }
       }
 
       span {
         opacity: 0;
         width: 1px;
         height: 1px;
+        overflow: hidden;
       }
     }
 
@@ -107,6 +111,7 @@
       order: -2;
       width: calc(50% - 120px);
       max-height: none;
+      font-size: 17px;
 
       a {
         padding: 33px 30px 30px 0;

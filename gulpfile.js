@@ -11,6 +11,8 @@ const svgstore = require("gulp-svgstore");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const del = require("del");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
 
 // Styles
 
@@ -32,6 +34,14 @@ const styles = () => {
 
 exports.styles = styles;
 
+//Html
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(posthtml([include()]))
+    .pipe(gulp.dest("build"))
+}
+
 //Images
 
 const images = () => {
@@ -41,6 +51,7 @@ const images = () => {
       imagemin.mozjpeg({quality: 75, progressive: true}),
       imagemin.svgo()
       ]))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.images = images;
@@ -98,10 +109,8 @@ exports.default = gulp.series(
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
     "source/js/**",
     "source/*.ico",
-    "source/*.html"
     ], {
       base: "source"
     })
@@ -121,17 +130,12 @@ exports.clean = clean;
 
 //Build
 
-const build = () => gulp.series(
-  "clean",
-  "copy",
-  "styles",
-  "sprite"
-  );
-
 exports.build = gulp.series(
   clean,
   copy,
+  images,
   styles,
-  sprite
+  sprite,
+  html
 );
 

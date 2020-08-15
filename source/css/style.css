@@ -716,11 +716,10 @@ img {
 }
 .basket-link {
   display: inline-block;
-  color: #000000;
   opacity: 0.2;
 }
 .basket-link:hover {
-  color: #63D1BB;
+  fill: #63D1BB;
   opacity: 1;
 }
 .basket-link:active {
@@ -1217,9 +1216,15 @@ img {
   align-items: center;
 }
 .copyright svg {
-  width: 50px;
   margin-top: 14px;
+  margin-left: 27px;
   fill: #63D1BB;
+}
+.copyright svg:hover {
+  fill: #46C1AE;
+}
+.copyright svg:active {
+  opacity: 0.3;
 }
 .copyright__text {
   font-size: 18px;

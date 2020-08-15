@@ -42,17 +42,21 @@ img {
 }
 .page-header__wrapper {
   position: relative;
-  margin: 0 auto;
-  padding: 0 30px;
-  max-width: 260px;
 }
 @media (min-width: 768px) {
+  .page-header__wrapper {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 260px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
   .page-header__wrapper {
     padding: 0 50px;
     max-width: 668px;
   }
 }
-@media (min-width: 1150px) {
+@media (min-width: 768px) and (min-width: 1150px) {
   .page-header__wrapper {
     max-width: 1050px;
   }
@@ -202,19 +206,34 @@ img {
   list-style: none;
   z-index: 100;
 }
+.site-nav__list a {
+  width: 260px;
+  margin: 0 auto;
+  padding: 29px 15px 25px 45px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.site-nav__list a:hover {
+  opacity: 0.6;
+}
+.site-nav__list a:hover svg {
+  fill: #63D1BB;
+  opacity: 1;
+}
+.site-nav__list a:active {
+  opacity: 0.3;
+}
 .site-nav__list li {
-  border-bottom: 1px solid #ececec;
+  border-top: 1px solid #ececec;
 }
 .site-nav__list svg {
   margin-left: -45px;
-}
-@media (max-width: 767px) {
-  .site-nav__list a {
-    margin: 0 auto;
-    width: 260px;
-    padding: 29px 15px 25px 45px;
-    box-sizing: border-box;
-  }
+  margin-right: 27px;
+  opacity: 0.2;
+  height: 24px;
 }
 @media (min-width: 768px) {
   .site-nav__list {
@@ -225,10 +244,9 @@ img {
   .site-nav__list a {
     width: auto;
   }
-}
-.site-nav__list--user svg {
-  margin-right: 27px;
-  opacity: 0.2;
+  .site-nav__list li {
+    border-top: 0;
+  }
 }
 @media (min-width: 768px) {
   .site-nav__list--user {
@@ -241,17 +259,9 @@ img {
   }
   .site-nav__list--user li {
     border-left: 1px solid #ececec;
-    border-bottom: none;
   }
   .site-nav__list--user a {
     padding: 33px 0 30px 82px;
-  }
-  .site-nav__list--user a:hover svg {
-    fill: #63D1BB;
-    opacity: 1;
-  }
-  .site-nav__list--user a:active svg {
-    opacity: 0.3;
   }
   .site-nav__list--user span {
     opacity: 0;
@@ -314,13 +324,6 @@ img {
   .site-nav__list--deals a {
     padding: 20px 60px 0 0;
   }
-}
-.site-nav__list a {
-  display: flex;
-  align-items: center;
-  min-height: 24px;
-  color: #000000;
-  text-decoration: none;
 }
 .site-nav__note {
   display: none;

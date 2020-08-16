@@ -110,7 +110,7 @@ img {
 }
 .page-header__toggler {
   position: absolute;
-  top: 50%;
+  top: 40px;
   right: 30px;
   transform: translateY(-50%);
   width: 20px;

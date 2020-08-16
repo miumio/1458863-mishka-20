@@ -61,7 +61,7 @@ exports.images = images;
 const webpp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("source/img"))
 }
 
 exports.webpp = webpp;
@@ -135,7 +135,5 @@ exports.build = gulp.series(
   copy,
   images,
   styles,
-  sprite,
   html
 );
-

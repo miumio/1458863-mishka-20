@@ -1,10 +1,10 @@
 .page-header__wrapper {
-  position: relative;
-  .container();
+  @media (min-width: @tablet-width) {
+    .container();
+  }
 }
 
 .page-header__top {
-  position: relative;
   display: flex;
   justify-content: center;
   padding: 22px 0 12px;
@@ -26,6 +26,7 @@
 }
 
 .page-header__logo {
+  position: relative;
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -53,8 +54,8 @@
 
 .page-header__toggler {
   position: absolute;
-  top: 50%;
-  right: 30px;
+  top: 40px;
+  right: 30%;
   transform: translateY(-50%);
   width: 20px;
   height: 14px;

@@ -68,7 +68,7 @@
     </header>
     <main class="page-main">
       <section class="catalog">
-          <h1 class="catalog__title">Каталог товаров</h1>
+          <h1 class="main-title">Каталог товаров</h1>
           <div class="catalog__wrapper">
             <ul class="catalog__list">
             <li class="catalog__item">
@@ -213,15 +213,37 @@
           </div>
         </div>
       </footer>
-      <section class="modal visually-hidden">
+      <section class="modal">
         <h3 class="modal__title">Добавить в корзину</h3>
-        <p class="modal__text">Выберите размер:</p>
-        <ul class="modal__list size-list">
-          <li class="size-list__item">S</li>
-          <li class="size-list__item">M</li>
-          <li class="size-list__item">L</li>
-        </ul>
-        <a href="#" class="button modal__button">Добавить</a>
+        <form class="modal__filter filter" action="http://echo.htmlacademy.ru" method="GET">
+          <fieldset class="filter_fieldset">
+            <legend class="filter__legend">Выберите размер:</legend>
+              <ul class="filter__list size-list">
+                <li class="size-list__item">
+                  <label class="size-list__label">
+                    <input class="visually-hidden" type="radio" name="size" id="s" checked>
+                    <span class="size-list__radio-box"></span>
+                    s
+                  </label>
+                </li>
+                <li class="size-list__item">
+                  <label class="size-list__label">
+                    <input class="visually-hidden" type="radio" name="size" id="m">
+                    <span class="size-list__radio-box"></span>
+                    m
+                  </label>
+                </li>
+                <li class="size-list__item">
+                  <label class="size-list__label">
+                    <input class="visually-hidden" type="radio" name="size" id="l">
+                    <span class="size-list__radio-box"></span>
+                    l
+                  </label>
+                </li>
+              </ul>
+          </fieldset>
+          <button class="button filter__button" type="submit">Добавить</button>
+        </form>
       </section>
     </main>
     <script src="js/nav.js"></script>

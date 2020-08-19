@@ -2,46 +2,8 @@
   .container();
 }
 
-.catalog__title {
-  .font(27px; 30px; 700);
-  position: relative;
-  margin: 0;
-  padding: 73px 18px;
-  display: block;
-  text-align: center;
-  background-color: @lightgrey;
-
-  @media (min-width: @tablet-width) {
-    .font(43px; 50px; 700);
-    padding: 100px 0 75px;
-
-    &::after {
-      position: absolute;
-      bottom: -12px;
-      left: -11px;
-      content: "";
-      width: 100%;
-      height: 24px;
-      background-image: url("../img/bg-zigzag-fill.svg");
-      background-size: 770px;
-
-      @media (min-width: @desktop-width) {
-        bottom: -5px;
-        left: -24px;
-        background-size: 1250px;
-      }
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    .font(53px; 57px; 700);
-    padding-bottom: 95px;
-  }
-}
-
 .catalog__list {
-  padding: 0;
-  list-style: none;
+  .list-reset();
   margin-top: 30px;
 
   @media (min-width: @tablet-width) {

@@ -175,7 +175,7 @@
             <td>Санкт-Петербург, ул. Большая Конюшенная,  д. 19/8, офис 101</td>
           </tr>
         </table>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253057016!2d30.32085335205239!3d59.938719168964724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595066260512!5m2!1sru!2sru" width="322" height="457" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253057016!2d30.32085335205239!3d59.938719168964724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595066260512!5m2!1sru!2sru" width="322" height="457" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <a href="#" class="button">Напишите нам</a>
       </section>
       <footer class="page-footer">
@@ -222,6 +222,38 @@
           </div>
         </div>
       </footer>
+      <section class="modal">
+        <h3 class="modal__title">Добавить в корзину</h3>
+        <form class="modal__filter filter" action="http://echo.htmlacademy.ru" method="GET">
+          <fieldset class="filter_fieldset">
+            <legend class="filter__legend">Выберите размер:</legend>
+              <ul class="filter__list size-list">
+                <li class="size-list__item">
+                  <label class="size-list__label">
+                    <input class="visually-hidden" type="radio" name="size" id="s" checked>
+                    <span class="size-list__radio-box"></span>
+                    s
+                  </label>
+                </li>
+                <li class="size-list__item">
+                  <label class="size-list__label">
+                    <input class="visually-hidden" type="radio" name="size" id="m">
+                    <span class="size-list__radio-box"></span>
+                    m
+                  </label>
+                </li>
+                <li class="size-list__item">
+                  <label class="size-list__label">
+                    <input class="visually-hidden" type="radio" name="size" id="l">
+                    <span class="size-list__radio-box"></span>
+                    l
+                  </label>
+                </li>
+              </ul>
+          </fieldset>
+          <button class="button filter__button" type="submit">Добавить</button>
+        </form>
+      </section>
     </main>
     <script src="js/nav.js"></script>
   </body>

@@ -72,11 +72,15 @@
         <div class="intro__wrapper">
           <h1 class="intro__title">Милые штуки ручной <br>работы для дома</h1>
           <ul class="intro__nav catalog-nav">
-            <li class="catalog-nav__link catalog-nav__link--interior">
-              <a href="#"><span>Предметы интерьера</span></a>
+            <li>
+              <a href="#" class="catalog-nav__link catalog-nav__link--interior">
+                <span>Предметы интерьера</span>
+              </a>
             </li>
-            <li class="catalog-nav__link catalog-nav__link--toys">
-              <a href="#"><span>Детские игрушки</span></a>
+            <li>
+              <a href="#" class="catalog-nav__link catalog-nav__link--toys">
+                <span>Детские игрушки</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -225,29 +229,20 @@
       <section class="modal">
         <h3 class="modal__title">Добавить в корзину</h3>
         <form class="modal__filter filter" action="http://echo.htmlacademy.ru" method="GET">
-          <fieldset class="filter_fieldset">
+          <fieldset class="filter__fieldset">
             <legend class="filter__legend">Выберите размер:</legend>
               <ul class="filter__list size-list">
                 <li class="size-list__item">
-                  <label class="size-list__label">
-                    <input class="visually-hidden" type="radio" name="size" id="s" checked>
-                    <span class="size-list__radio-box"></span>
-                    s
-                  </label>
+                  <input class="visually-hidden" type="radio" name="size" id="s" checked>
+                  <span class="size-list__radio-btn">s</span>
                 </li>
                 <li class="size-list__item">
-                  <label class="size-list__label">
-                    <input class="visually-hidden" type="radio" name="size" id="m">
-                    <span class="size-list__radio-box"></span>
-                    m
-                  </label>
+                  <input class="visually-hidden" type="radio" name="size" id="m">
+                  <span class="size-list__radio-btn">m</span>
                 </li>
                 <li class="size-list__item">
-                  <label class="size-list__label">
-                    <input class="visually-hidden" type="radio" name="size" id="l">
-                    <span class="size-list__radio-box"></span>
-                    l
-                  </label>
+                  <input class="visually-hidden" type="radio" name="size" id="l">
+                  <span class="size-list__radio-btn">l</span>
                 </li>
               </ul>
           </fieldset>

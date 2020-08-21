@@ -6,6 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
+    <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* Mobile layout by default */
+      background-image: url( "img/320.png" );
+    }
+    /* Tablet */
+    @media ( min-width: 760px ) {
+      HTML {
+        /* Tablet layout */
+        background-image: url( "img/768.png" );
+      }
+    }
+    /* Desktop */
+    @media ( min-width: 960px ) {
+      HTML {
+        /* Desktop layout */
+        background-image: url( "img/1150.png" );
+      }
+    }
+  </style>
+  <link href="pixel-glass/styles.css" rel="stylesheet">
+  <script src="pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -70,7 +96,7 @@
     <main class="page-main">
       <section class="intro">
         <div class="intro__wrapper">
-          <h1 class="intro__title">Милые штуки ручной <br>работы для дома</h1>
+          <h1 class="page-main__title">Милые штуки ручной <br>работы для дома</h1>
           <ul class="intro__nav catalog-nav">
             <li>
               <a href="#" class="catalog-nav__link catalog-nav__link--interior">
@@ -88,7 +114,7 @@
       <section class="popular">
         <div class="popular__wrapper">
           <div class="popular__title-block">
-            <h2 class="popular__title">Вязаные корзинки</h2>
+            <h2 class="title">Вязаные корзинки</h2>
             <span class="popular__subtitle">Товар недели</span>
           </div>
           <p class="popular__description">
@@ -125,7 +151,7 @@
       </section>
       <section class="advantages">
         <div class="advantages_wrapper">
-          <h2 class="advantages__title">Коротко о нас:</h2>
+          <h2 class="title">Коротко о нас:</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--eco">Экологически чистые материалы</li>
             <li class="advantages__item advantages__item--price">Скандинавский стиль по российской цене</li>
@@ -137,9 +163,9 @@
         </div>
       </section>
       <section class="reviews">
-        <h2 class="reviews__title">Отзывы</h2>
-        <div class="reviews__wrapper slider">
-          <ul class="reviews__list slider__list">
+        <div class="reviews__wrapper">
+          <h2 class="title">Отзывы</h2>
+          <ul class="reviews__list slider">
             <li class="slider__item">
               <blockquote class="reviews__item">
                 <p class="reviews__text">
@@ -150,14 +176,14 @@
               </blockquote>
             </li>
           </ul>
-          <p class="reviews__toggles slider__toggles">
-            <a href="#" class="reviews__button reviews__button--prev">
+          <p class="slider__toggles">
+            <a href="#" class="slider__button slider__button--prev">
               <span class="visually-hidden">Предыдущий отзыв</span>
               <svg width="50" height="26">
                 <use xlink:href="img/sprite.svg#icon-left-arrow"></use>
               </svg>
             </a>
-            <a href="#" class="reviews__button reviews__button--next">
+            <a href="#" class="slider__button slider__button--next">
               <span class="visually-hidden">Следующий отзыв</span>
               <svg width="50" height="26">
                 <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
@@ -168,7 +194,7 @@
         </div>
       </section>
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
+        <h2 class="title">Контакты</h2>
         <table class="contacts__info">
           <tr>
             <th>e-mail:</th>

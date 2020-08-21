@@ -1,14 +1,10 @@
 .catalog-nav {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    align-items: flex-end;
-  }
+  .list-reset();
 }
 
 .catalog-nav__link {
   .font(19px; 24px; 700);
   display: flex;
-  flex-grow: 1;
   text-decoration: none;
 
   &:hover {
@@ -28,9 +24,8 @@
     position: relative;
     display: block;
     width: 320px;
-    min-height: 124px;
     margin: 0 auto;
-    padding: 22px 120px 33px 33px;
+    padding: 22px 120px 33px 30px;
     color: #ffffff;
     text-decoration: none;
     box-sizing: border-box;
@@ -38,11 +33,21 @@
     &::after {
       position: absolute;
       top: 0;
-      right: 40px;
+      right: 26px;
       content: "";
       width: 60px;
       height: 100%;
       opacity: 0.5;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 334px;
+      padding: 27px 120px 35px 36px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 525px;
+      padding-right: 310px;
     }
   }
 
@@ -55,7 +60,7 @@
     }
 
     span::after {
-      background: url("../img/icon-interior.svg") no-repeat 10px 20px;
+      background: url("../img/icon-interior.svg") no-repeat center;
       background-size: 40px 62px;
     }
   }
@@ -70,16 +75,16 @@
     }
 
     span::after {
-      background: url("../img/icon-toy.svg") no-repeat 0 20px;
+      background: url("../img/icon-toy.svg") no-repeat center;
       background-size: 60px 60px;
+
+      @media (min-width: @tablet-width) {
+        right: 33px;
+      }
     }
   }
 
   @media (min-width: @tablet-width) {
     .font (20px; 30px; 700);
-
-    span {
-      padding: 26px 160px 35px 35px;
-    }
   }
 }

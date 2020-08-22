@@ -1,0 +1,28 @@
+.size-list {
+  padding: 0;
+  list-style: none;
+}
+
+.size-list__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.size-list__radio-btn {
+  .font(17px; 16px);
+  display: block;
+  width: 78px;
+  padding: 16px 0;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid @lightgrey;
+}
+
+.size-list__input:focus,
+.size-list__input:checked + .size-list__radio-btn {
+  border-color: @green;
+}

@@ -2,3 +2,51 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 }
+
+.page-main__title {
+  .font(27px; 30px);
+  margin: 0 auto;
+  width: 270px;
+  color: @black;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .font(43px; 50px);
+    width: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    .font(53px; 57px);
+  }
+}
+
+.page-main__header {
+  position: relative;
+  padding: 73px 18px;
+  background-color: @lightgrey;
+
+  @media (min-width: @tablet-width) {
+    padding: 100px 0 75px;
+
+    &::after {
+      position: absolute;
+      bottom: -12px;
+      left: -11px;
+      content: "";
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: 770px;
+
+      @media (min-width: @desktop-width) {
+        bottom: -5px;
+        left: -24px;
+        background-size: 1250px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 95px;
+  }
+}

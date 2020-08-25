@@ -4,10 +4,7 @@
   background-size: 320px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 55px 0 75px;
+    padding-bottom: 70px;
     background-size: 772px;
   }
 
@@ -24,8 +21,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    padding-top: 20px;
     min-height: 495px;
   }
 
@@ -38,7 +34,7 @@
 
 .popular__wrapper .button {
   @media (min-width: @tablet-width) {
-    width: 292px;
+    width: 288px;
   }
 }
 
@@ -54,7 +50,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 7px;
+    margin-top: 29px;
     position: absolute;
     top: 90px;
     right: 50px;
@@ -63,7 +59,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 17px;
+    margin-top: 37px;
     position: absolute;
     top: 0;
     right: 0;
@@ -72,25 +68,12 @@
   }
 }
 
-.popular__title {
-  .font(25px; 30px; 700);
-  margin: 0;
-  color: #000000;
+.popular__header {
+  margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
-    .font(43px; 50px; 700);
-    margin: 0;
-    margin-top: -2px;
-  }
-
-  @media (min-width: @desktop-width) {
-    .font(53px; 57px; 700);
-  }
-}
-
-.popular__title-block {
-  @media (min-width: @tablet-width) {
-    padding-right: 10px;
+    padding-right: 13px;
+    margin-bottom: 37px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -104,30 +87,34 @@
 }
 
 .popular__description {
-  margin-top: 10px;
+  margin: 0;
+  margin-bottom: 20px;
   line-height: 24px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 25px;
+    margin-bottom: 38px;
     padding-right: 375px;
     font-size: 17px;
     line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
-    margin-top: 35px;
     padding-right: 530px;
+    margin: 0;
+    margin-bottom: 50px;
   }
 }
 
 .popular__price {
-  .font(17px; 24px; 700);
+  .font(17px; 24px);
+  margin: 0;
   margin-bottom: 25px;
   text-align: center;
+  font-weight: 700;
 
   @media (min-width: @tablet-width) {
-    .font(20px; 24px; 700);
+    .font(20px; 24px);
+    margin-bottom: 31px;
     width: 292px;
   }
 
@@ -138,27 +125,28 @@
 }
 
 .popular__subtitle {
-  .font(17px; 24px; 700);
+  .font(17px; 24px);
   z-index: 100;
   text-transform: uppercase;
   color: @green;
   line-height: 20px;
+  font-size: 17px;
+  font-weight: 700;
 
   @media (min-width: @tablet-width) {
+    margin-top: 3px;
     width: 100px;
     text-align: center;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 82px;
+    top: 102px;
     left: 30px;
   }
 }
 
 .popular__details {
-  margin-top: 20px;
-  margin-bottom: 20px;
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
@@ -175,10 +163,11 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 62px;
     width: 292px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 50px;
+    margin-bottom: 116px;
   }
 }

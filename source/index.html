@@ -6,6 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* Mobile layout by default */
+        background-image: url( "img/320.png" );
+      }
+      /* Tablet */
+      @media ( min-width: 760px ) {
+        HTML {
+          /* Tablet layout */
+          background-image: url( "img/768.png" );
+        }
+      }
+      /* Desktop */
+      @media ( min-width: 960px ) {
+        HTML {
+          /* Desktop layout */
+          background-image: url( "img/1150.png" );
+        }
+      }
+    </style>
+    <link href="js/pixel-glass/styles.css" rel="stylesheet">
+    <script src="js/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -70,21 +96,25 @@
     <main class="page-main">
       <section class="intro">
         <div class="intro__wrapper">
-          <h1 class="intro__title">Милые штуки ручной <br>работы для дома</h1>
+          <h1 class="page-main__title">Милые штуки ручной <br>работы для дома</h1>
           <ul class="intro__nav catalog-nav">
-            <li class="catalog-nav__link catalog-nav__link--interior">
-              <a href="#"><span>Предметы интерьера</span></a>
+            <li>
+              <a href="#" class="catalog-nav__link catalog-nav__link--interior">
+                <span>Предметы интерьера</span>
+              </a>
             </li>
-            <li class="catalog-nav__link catalog-nav__link--toys">
-              <a href="#"><span>Детские игрушки</span></a>
+            <li>
+              <a href="#" class="catalog-nav__link catalog-nav__link--toys">
+                <span>Детские игрушки</span>
+              </a>
             </li>
           </ul>
         </div>
       </section>
       <section class="popular">
         <div class="popular__wrapper">
-          <div class="popular__title-block">
-            <h2 class="popular__title">Вязаные корзинки</h2>
+          <div class="popular__header">
+            <h2 class="title">Вязаные корзинки</h2>
             <span class="popular__subtitle">Товар недели</span>
           </div>
           <p class="popular__description">
@@ -121,7 +151,7 @@
       </section>
       <section class="advantages">
         <div class="advantages_wrapper">
-          <h2 class="advantages__title">Коротко о нас:</h2>
+          <h2 class="title">Коротко о нас:</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--eco">Экологически чистые материалы</li>
             <li class="advantages__item advantages__item--price">Скандинавский стиль по российской цене</li>
@@ -133,9 +163,9 @@
         </div>
       </section>
       <section class="reviews">
-        <h2 class="reviews__title">Отзывы</h2>
-        <div class="reviews__wrapper slider">
-          <ul class="reviews__list slider__list">
+        <div class="reviews__wrapper">
+          <h2 class="title">Отзывы</h2>
+          <ul class="reviews__list slider">
             <li class="slider__item">
               <blockquote class="reviews__item">
                 <p class="reviews__text">
@@ -146,14 +176,14 @@
               </blockquote>
             </li>
           </ul>
-          <p class="reviews__toggles slider__toggles">
-            <a href="#" class="reviews__button reviews__button--prev">
+          <p class="reviews__toggles">
+            <a href="#" class="reviews__button">
               <span class="visually-hidden">Предыдущий отзыв</span>
               <svg width="50" height="26">
                 <use xlink:href="img/sprite.svg#icon-left-arrow"></use>
               </svg>
             </a>
-            <a href="#" class="reviews__button reviews__button--next">
+            <a href="#" class="reviews__button">
               <span class="visually-hidden">Следующий отзыв</span>
               <svg width="50" height="26">
                 <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
@@ -164,30 +194,28 @@
         </div>
       </section>
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <table class="contacts__info">
-          <tr>
-            <th>e-mail:</th>
-            <td><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
-          </tr>
-          <tr>
-            <th>адрес:</th>
-            <td>Санкт-Петербург, ул. Большая Конюшенная,  д. 19/8, офис 101</td>
-          </tr>
-        </table>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253057016!2d30.32085335205239!3d59.938719168964724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595066260512!5m2!1sru!2sru" width="322" height="457" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <a href="#" class="button">Напишите нам</a>
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title title">Контакты</h2>
+          <dl class="contacts__details">
+            <dt>e-mail:</dt>
+            <dd><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
+            <dt>адрес:</dt>
+            <dd>г. Санкт-Петербург, ул. Большая Конюшенная,<br>д. 19/8, офис 101</dd>
+          </dl>
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253057016!2d30.32085335205239!3d59.938719168964724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595066260512!5m2!1sru!2sru" width="322" height="457" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <a href="#" class="button">Напишите нам</a>
+        </div>
       </section>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
-          <a>
-            <svg class="page-footer__logo" width="101" height="34">
-              <use xlink:href="img/sprite.svg#footer-logo"></use>
+          <a class="page-footer__logo">
+            <svg width="101" height="34">
+              <use xlink:href="img/sprite.svg#icon-footer-logo"></use>
             </svg>
           </a>
           <ul class="page-footer__social social">
             <li class="social__item">
-              <a href="#" class="social__link social__link--instagram">
+              <a href="#" class="social__link">
                 <span class="visually-hidden">Инстаграмм</span>
                 <svg width="22" height="22">
                   <use xlink:href="img/sprite.svg#icon-insta"></use>
@@ -195,7 +223,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--facebook">
+              <a href="#" class="social__link">
                 <span class="visually-hidden">Фейсбук</span>
                 <svg width="15" height="28">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
@@ -203,7 +231,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--twitter">
+              <a href="#" class="social__link">
                 <span class="visually-hidden">Твиттер</span>
                 <svg width="24" height="20">
                   <use xlink:href="img/sprite.svg#icon-twitter"></use>
@@ -216,7 +244,7 @@
             <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
               <span class="visually-hidden">Логотип HTML Academy</span>
               <svg width="27" height="34">
-                <use xlink:href="img/sprite.svg#html-logo"></use>
+                <use xlink:href="img/sprite.svg#icon-html-logo"></use>
               </svg>
             </a>
           </div>
@@ -225,28 +253,25 @@
       <section class="modal">
         <h3 class="modal__title">Добавить в корзину</h3>
         <form class="modal__filter filter" action="http://echo.htmlacademy.ru" method="GET">
-          <fieldset class="filter_fieldset">
+          <fieldset class="filter__fieldset">
             <legend class="filter__legend">Выберите размер:</legend>
               <ul class="filter__list size-list">
-                <li class="size-list__item">
-                  <label class="size-list__label">
-                    <input class="visually-hidden" type="radio" name="size" id="s" checked>
-                    <span class="size-list__radio-box"></span>
-                    s
+                <li>
+                  <label>
+                    <input class="size-list__input" type="radio" name="size" id="s" checked>
+                    <span class="size-list__radio-btn">s</span>
                   </label>
                 </li>
-                <li class="size-list__item">
-                  <label class="size-list__label">
-                    <input class="visually-hidden" type="radio" name="size" id="m">
-                    <span class="size-list__radio-box"></span>
-                    m
+                <li>
+                  <label>
+                    <input class="size-list__input" type="radio" name="size" id="m">
+                    <span class="size-list__radio-btn">m</span>
                   </label>
                 </li>
-                <li class="size-list__item">
-                  <label class="size-list__label">
-                    <input class="visually-hidden" type="radio" name="size" id="l">
-                    <span class="size-list__radio-box"></span>
-                    l
+                <li>
+                  <label>
+                    <input class="size-list__input" type="radio" name="size" id="l">
+                    <span class="size-list__radio-btn">l</span>
                   </label>
                 </li>
               </ul>

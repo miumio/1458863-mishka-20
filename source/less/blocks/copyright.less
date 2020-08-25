@@ -3,6 +3,10 @@
   justify-content: center;
   align-items: center;
 
+  @media (max-width: @mobile-width) {
+    margin-top: 34px;
+  }
+
   svg {
     margin-top: 14px;
     margin-left: 27px;
@@ -19,5 +23,6 @@
 }
 
 .copyright__text {
-  .font(18px; 18px; 700);
+  .font(19px; 18px);
+  font-weight: 700;
 }

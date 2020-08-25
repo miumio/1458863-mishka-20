@@ -25,9 +25,18 @@
   padding: 28px 28px 20px;
   min-height: 179px;
   box-sizing: border-box;
+  border: 1px solid #ececec;
 
   a {
     text-decoration: none;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width) {
@@ -42,7 +51,6 @@
 }
 
 .product-card__title {
-
   &:hover {
     opacity: 0.6;
   }

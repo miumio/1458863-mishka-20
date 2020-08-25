@@ -7,31 +7,31 @@
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
     <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* Mobile layout by default */
-      background-image: url( "img/320.png" );
-    }
-    /* Tablet */
-    @media ( min-width: 760px ) {
+    <style>
       HTML {
-        /* Tablet layout */
-        background-image: url( "img/768.png" );
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* Mobile layout by default */
+        background-image: url( "img/320.png" );
       }
-    }
-    /* Desktop */
-    @media ( min-width: 960px ) {
-      HTML {
-        /* Desktop layout */
-        background-image: url( "img/1150.png" );
+      /* Tablet */
+      @media ( min-width: 760px ) {
+        HTML {
+          /* Tablet layout */
+          background-image: url( "img/768.png" );
+        }
       }
-    }
-  </style>
-  <link href="pixel-glass/styles.css" rel="stylesheet">
-  <script src="pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
+      /* Desktop */
+      @media ( min-width: 960px ) {
+        HTML {
+          /* Desktop layout */
+          background-image: url( "img/1150.png" );
+        }
+      }
+    </style>
+    <link href="js/pixel-glass/styles.css" rel="stylesheet">
+    <script src="js/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -176,14 +176,14 @@
               </blockquote>
             </li>
           </ul>
-          <p class="slider__toggles">
-            <a href="#" class="slider__button slider__button--prev">
+          <p class="reviews__toggles">
+            <a href="#" class="reviews__button">
               <span class="visually-hidden">Предыдущий отзыв</span>
               <svg width="50" height="26">
                 <use xlink:href="img/sprite.svg#icon-left-arrow"></use>
               </svg>
             </a>
-            <a href="#" class="slider__button slider__button--next">
+            <a href="#" class="reviews__button">
               <span class="visually-hidden">Следующий отзыв</span>
               <svg width="50" height="26">
                 <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
@@ -208,14 +208,14 @@
       </section>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
-          <a>
-            <svg class="page-footer__logo" width="101" height="34">
-              <use xlink:href="img/sprite.svg#footer-logo"></use>
+          <a class="page-footer__logo">
+            <svg width="101" height="34">
+              <use xlink:href="img/sprite.svg#icon-footer-logo"></use>
             </svg>
           </a>
           <ul class="page-footer__social social">
             <li class="social__item">
-              <a href="#">
+              <a href="#" class="social__link">
                 <span class="visually-hidden">Инстаграмм</span>
                 <svg width="22" height="22">
                   <use xlink:href="img/sprite.svg#icon-insta"></use>
@@ -223,7 +223,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a href="#">
+              <a href="#" class="social__link">
                 <span class="visually-hidden">Фейсбук</span>
                 <svg width="15" height="28">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
@@ -231,7 +231,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a href="#">
+              <a href="#" class="social__link">
                 <span class="visually-hidden">Твиттер</span>
                 <svg width="24" height="20">
                   <use xlink:href="img/sprite.svg#icon-twitter"></use>
@@ -244,7 +244,7 @@
             <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
               <span class="visually-hidden">Логотип HTML Academy</span>
               <svg width="27" height="34">
-                <use xlink:href="img/sprite.svg#html-logo"></use>
+                <use xlink:href="img/sprite.svg#icon-html-logo"></use>
               </svg>
             </a>
           </div>

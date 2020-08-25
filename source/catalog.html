@@ -6,31 +6,31 @@
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
     <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* Mobile layout by default */
-      background-image: url( "img/320catalog.png" );
-    }
-    /* Tablet */
-    @media ( min-width: 760px ) {
+    <style>
       HTML {
-        /* Tablet layout */
-        background-image: url( "img/768catalog.png" );
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* Mobile layout by default */
+        background-image: url( "img/320catalog.png" );
       }
-    }
-    /* Desktop */
-    @media ( min-width: 960px ) {
-      HTML {
-        /* Desktop layout */
-        background-image: url( "img/1150catalog.png" );
+      /* Tablet */
+      @media ( min-width: 760px ) {
+        HTML {
+          /* Tablet layout */
+          background-image: url( "img/768catalog.png" );
+        }
       }
-    }
-  </style>
-  <link href="pixel-glass/styles.css" rel="stylesheet">
-  <script src="pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
+      /* Desktop */
+      @media ( min-width: 960px ) {
+        HTML {
+          /* Desktop layout */
+          background-image: url( "img/1150catalog.png" );
+        }
+      }
+    </style>
+    <link href="js/pixel-glass/styles.css" rel="stylesheet">
+    <script src="js/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -111,7 +111,7 @@
                     <img src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Фото зайчика">
                   </picture>
                 </a>
-                <div class="product-card__info page-main__box-shadow">
+                <div class="product-card__info">
                   <a href="#">
                     <h2 class="product-card__title catalog-title">Зайчик-попрыгайчик</h2>
                   </a>
@@ -139,7 +139,7 @@
                     <img src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Фото корзинки для белья">
                   </picture>
                 </a>
-                <div class="product-card__info page-main__box-shadow">
+                <div class="product-card__info">
                   <a href="#">
                     <h2 class="product-card__title catalog-title">Корзинка для белья</h2>
                   </a>
@@ -167,7 +167,7 @@
                     <img src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Фото большой корзинки для игрушек">
                   </picture>
                 </a>
-                <div class="product-card__info page-main__box-shadow">
+                <div class="product-card__info">
                   <a href="#">
                     <h2 class="product-card__title catalog-title">Большая корзинка <br>для игрушек</h2>
                   </a>
@@ -187,7 +187,7 @@
         </div>
       </section>
       <section class="video">
-        <div class="video__wrapper page-main__box-shadow">
+        <div class="video__wrapper">
           <h2 class="video__title catalog-title">Процесс производства</h2>
           <div class="video__source">
             <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="Обложка видео">
@@ -203,12 +203,12 @@
         <div class="page-footer__wrapper">
           <a>
             <svg class="page-footer__logo" width="101" height="34">
-              <use xlink:href="img/sprite.svg#footer-logo"></use>
+              <use xlink:href="img/sprite.svg#icon-footer-logo"></use>
             </svg>
           </a>
           <ul class="page-footer__social social">
             <li class="social__item">
-              <a href="#" class="social__link social__link--instagram">
+              <a href="#" class="social__link">
                 <span class="visually-hidden">Инстаграмм</span>
                 <svg width="22" height="22">
                   <use xlink:href="img/sprite.svg#icon-insta"></use>
@@ -216,7 +216,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--facebook">
+              <a href="#" class="social__link">
                 <span class="visually-hidden">Фейсбук</span>
                 <svg width="15" height="28">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
@@ -224,7 +224,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--twitter">
+              <a href="#" class="social__link">
                 <span class="visually-hidden">Твиттер</span>
                 <svg width="24" height="20">
                   <use xlink:href="img/sprite.svg#icon-twitter"></use>
@@ -237,7 +237,7 @@
             <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
               <span class="visually-hidden">Логотип HTML Academy</span>
               <svg width="27" height="34">
-                <use xlink:href="img/sprite.svg#html-logo"></use>
+                <use xlink:href="img/sprite.svg#icon-html-logo"></use>
               </svg>
             </a>
           </div>

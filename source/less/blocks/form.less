@@ -76,7 +76,7 @@
 .form__textarea {
   display: block;
   width: 100%;
-  font-family: "Open Sans, Arial, sans-serif";
+  font-family: inherit;
   resize: none;
   border: 2px solid @black;
   box-sizing: border-box;
@@ -103,18 +103,18 @@
 }
 
 .form__input:checked + .form__checkbox {
-  &:after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 5px;
-  width: 11px;
-  height: 2px;
-  background-color: #000000;
-  transform: rotate(45deg);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 11px;
+    height: 2px;
+    background-color: #000000;
+    transform: rotate(45deg);
   }
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 17px;
@@ -123,5 +123,5 @@
     height: 2px;
     background-color: #000000;
     transform: rotate(-45deg);
-    }
+  }
 }

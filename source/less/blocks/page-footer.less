@@ -44,14 +44,29 @@
   }
 }
 
-// .page-footer__item {
-//   @media (min-width: @tablet-width) {
-//     margin-top: 10px;
-//   }
-// }
-
-.page-footer__item {
+.page-footer__copyright {
+  .font(19px; 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 49px;
+  font-weight: 700;
+  text-decoration: none;
+  color: @black;
+  margin-top: 49px;
+
+  svg {
+    margin-left: 27px;
+    fill: @green;
+  }
+
+  &:hover svg {
+    fill: #46c1ae;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     margin-top: -12px;

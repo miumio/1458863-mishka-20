@@ -1,10 +1,31 @@
 .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   padding: 28px 30px 46px;
+  width: 320px;
+  height: 336px;
+  background-color: #ffffff;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  box-sizing: border-box;
+}
+
+.modal--show {
+  display: block;
+  z-index: 1000;
 }
 
 .modal__title {
   .font(25px; 30px);
+  margin: 0;
+  padding: 0 48px;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
   color: @black;
 }

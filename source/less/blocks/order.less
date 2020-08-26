@@ -1,16 +1,26 @@
 .order {
-  padding: 20px 0;
-}
+  padding: 20px 0 56px;
 
-.order__wrapper {
-  .container();
+  @media (min-width: @tablet-width) {
+    padding-top: 69px;
+  }
 }
 
 .order__desc {
   .font(13px; 24px);
-  margin: 0;
+  max-width: 260px;
+  margin: 0 auto 30px;
+
+  @media (min-width: @tablet-width) {
+    .font(17px; 30px);
+    margin-bottom: 82px;
+    max-width: 668px ;
+  }
 }
 
 .order__form {
-  margin-top: 30px;
+  @media (max-width: @mobile-width) {
+    margin: 0 auto;
+    max-width: 260px;
+  }
 }

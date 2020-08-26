@@ -118,7 +118,7 @@
                   <p class="product-card__description">Рост 30см, вес 200 г.</p>
                   <div class="product-card__inner">
                     <span class="product-card__price">1 200 руб.</span>
-                    <a href="#" class="basket-link">
+                    <a href="#" class="basket-link js-popup">
                       <svg width="20" height="18">
                         <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
@@ -146,7 +146,7 @@
                   <p class="product-card__description">Диаметр 15 см, высота 10 см</p>
                   <div class="product-card__inner">
                     <span class="product-card__price">690 руб.</span>
-                    <a href="#" class="basket-link">
+                    <a href="#" class="basket-link js-popup">
                       <svg width="20" height="18">
                         <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
@@ -174,7 +174,7 @@
                   <p class="product-card__description">Диаметр 30 см, высота 30 см</p>
                   <div class="product-card__inner">
                     <span class="product-card__price">1 500 руб.</span>
-                    <a href="#" class="basket-link">
+                    <a href="#" class="basket-link js-popup">
                       <svg width="20" height="18">
                         <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
@@ -201,8 +201,8 @@
       </section>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
-          <a>
-            <svg class="page-footer__logo" width="101" height="34">
+          <a class="page-footer__logo">
+            <svg width="101" height="34">
               <use xlink:href="img/sprite.svg#icon-footer-logo"></use>
             </svg>
           </a>
@@ -232,15 +232,13 @@
               </a>
             </li>
           </ul>
-          <div class="page-footer__item copyright">
-            <span class="copyright__text">Разработано</span>
-            <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
-              <span class="visually-hidden">Логотип HTML Academy</span>
-              <svg width="27" height="34">
-                <use xlink:href="img/sprite.svg#icon-html-logo"></use>
-              </svg>
-            </a>
-          </div>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright">
+            Разработано
+            <span class="visually-hidden">HTML Academy</span>
+            <svg width="27" height="34">
+              <use xlink:href="img/sprite.svg#icon-html-logo"></use>
+            </svg>
+          </a>
         </div>
       </footer>
       <section class="modal">

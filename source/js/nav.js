@@ -13,13 +13,8 @@
     }
   });
 
-  var popupLink = document.querySelector(".js-popup");
+  var popupLink = document.querySelectorAll(".js-popup");
   var modalPopup = document.querySelector(".modal");
-
-  popupLink.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    modalPopup.classList.add("modal--show");
-  });
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
@@ -29,3 +24,10 @@
       }
     }
   });
+
+  for (var i = 0; i < popupLink.length; i++) {
+    popupLink[i].addEventListener("click", function(evt) {
+      evt.preventDefault();
+      modalPopup.classList.add("modal--show");
+    });
+  }

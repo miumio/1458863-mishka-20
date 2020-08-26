@@ -1,6 +1,9 @@
 .size-list {
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .size-list__input {
@@ -16,10 +19,15 @@
   display: block;
   width: 78px;
   padding: 16px 0;
+  margin-bottom: 5px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   border: 2px solid @lightgrey;
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
+  }
 }
 
 .size-list__input:focus,

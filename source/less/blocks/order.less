@@ -1,8 +1,8 @@
 .order {
-  padding: 20px 0 56px;
+  padding: 20px 0 55px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 69px;
+    padding: 69px 0 48px;
   }
 
   @media (min-width: @desktop-width) {
@@ -13,11 +13,10 @@
 .order__desc {
   .font(13px; 24px);
   max-width: 260px;
-  margin: 0 auto 30px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     .font(17px; 30px);
-    margin-bottom: 64px;
     max-width: 668px ;
   }
 
@@ -27,8 +26,12 @@
 }
 
 .order__form {
-  @media (max-width: @mobile-width) {
-    margin: 0 auto;
-    max-width: 260px;
+  width: 260px;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 14px;
+    width: auto;
   }
 }

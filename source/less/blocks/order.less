@@ -1,16 +1,37 @@
 .order {
-  padding: 20px 0;
-}
+  padding: 20px 0 55px;
 
-.order__wrapper {
-  .container();
+  @media (min-width: @tablet-width) {
+    padding: 69px 0 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 121px;
+  }
 }
 
 .order__desc {
   .font(13px; 24px);
-  margin: 0;
+  max-width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    .font(17px; 30px);
+    max-width: 668px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 700px;
+  }
 }
 
 .order__form {
+  width: 260px;
+  margin: 0 auto;
   margin-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 14px;
+    width: auto;
+  }
 }

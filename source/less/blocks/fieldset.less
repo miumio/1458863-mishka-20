@@ -1,0 +1,249 @@
+.fieldset__legend {
+  .font(17px; 16px);
+  display: block;
+  margin: 0;
+  margin-bottom: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @green;
+
+  &--color {
+    margin-bottom: 25px;
+  }
+
+  &--user {
+    margin-bottom: 30px;
+  }
+
+  &--contacts {
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 17px;
+    left: 0;
+    margin: 0;
+    display: flex;
+
+    &--contacts {
+      left: -170px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--contacts {
+      left: -115px;
+    }
+  }
+}
+
+.fieldset__list {
+  .list-reset();
+
+  @media (min-width: @tablet-width) {
+    width: 500px;
+    margin-left: auto;
+
+    &--color {
+      display: grid;
+      grid-template-columns: 47% 47%;
+      grid-template-rows: 1fr;
+      grid-gap: 26px;
+      width: 501px;
+
+      @media (min-width: @desktop-width) {
+        width: auto;
+        grid-template-columns: 30% 30% 30%;
+        grid-column-gap: 18px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 116px;
+    width: auto;
+  }
+}
+
+.fieldset__item {
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  &--color {
+    margin-bottom: 23px;
+  }
+
+  &--user {
+    margin-bottom: 24px;
+  }
+
+  &--contacts {
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--color {
+      margin-bottom: 0;
+    }
+
+    &--user {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: baseline;
+    }
+
+    &--contacts {
+      margin-bottom: 23px;
+    }
+  }
+}
+
+.fieldset__label {
+  .font(17px; 18px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+  padding-left: 60px;
+  font-weight: 700;
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    .font(19px; 18px);
+    min-height: 50px;
+    padding-left: 79px;
+
+    &--user {
+      margin-right: 25px;
+      padding-left: 0;
+    }
+  }
+
+  &--user {
+    padding-left: 0;
+    min-height: 10px;
+  }
+}
+
+.fieldset__radio-btn {
+  position: absolute;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border: 9px solid #ffffff;
+  box-shadow: 0 0 0 2px #444444;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 20px;
+    border-width: 13px;
+  }
+}
+
+.fieldset__input:checked + .fieldset__radio-btn {
+  background-color: @green;
+}
+
+.fieldset__checkbox {
+  position: absolute;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  border: 2px solid #444444;
+
+  @media (min-width: @tablet-width) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.fieldset__input {
+  display: block;
+  width: 100%;
+  padding: 18px 0 15px;
+  border: none;
+  border-bottom: 2px solid @black;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    .font(19px; 21px);
+    padding: 16px 16px 13px;
+    box-sizing: border-box;
+  }
+}
+
+.fieldset__input:checked + .fieldset__checkbox {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 11px;
+    height: 2px;
+    background-color: #000000;
+    transform: rotate(45deg);
+
+    @media (min-width: @tablet-width) {
+      top: 28px;
+      left: 7px;
+      width: 16px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 10px;
+    width: 21px;
+    height: 2px;
+    background-color: #000000;
+    transform: rotate(-45deg);
+
+    @media (min-width: @tablet-width) {
+      top: 24px;
+      left: 16px;
+      width: 29px;
+    }
+  }
+}
+
+.fieldset__textarea {
+  display: block;
+  margin-top: -10px;
+  padding: 15px;
+  width: 100%;
+  .font(17px; 18px);
+  font-family: inherit;
+  resize: none;
+  border: 2px solid @black;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 501px;
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+  }
+}
+
+.fieldset__textarea::placeholder,
+.fieldset__input::placeholder {
+  .font(17px; 18px);
+  color: @black;
+  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    .font(19px; 21px);
+  }
+}

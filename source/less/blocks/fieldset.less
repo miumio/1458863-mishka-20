@@ -2,7 +2,7 @@
   .font(17px; 16px);
   display: block;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   font-weight: 700;
   text-transform: uppercase;
   color: @green;
@@ -28,6 +28,11 @@
 
     &--contacts {
       left: -170px;
+    }
+
+    &--user {
+      margin: 0;
+      top: 19px;
     }
   }
 
@@ -67,7 +72,39 @@
 }
 
 .fieldset__item {
+  position: relative;
   margin-bottom: 13px;
+
+  &--contacts {
+    margin-bottom: 37px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 14px;
+      right: 3px;
+      width: 32px;
+      height: 24px;
+      background-color: rgba(0, 0, 0, 0.3);
+
+      @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+        bottom: 16px;
+        right: 22px;
+      }
+    }
+
+    &:hover::after {
+      background-color: @green;
+    }
+  }
+
+  &--phone::after {
+    mask: url("../img/icon-phone.svg") no-repeat center;
+  }
+
+  &--email::after {
+    mask: url("../img/icon-mail.svg") no-repeat center;
+  }
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -82,10 +119,6 @@
     margin-bottom: 24px;
   }
 
-  &--contacts {
-    margin-bottom: 37px;
-  }
-
   @media (min-width: @tablet-width) {
     &--color {
       margin-bottom: 0;
@@ -98,7 +131,7 @@
     }
 
     &--contacts {
-      margin-bottom: 23px;
+      margin-bottom: 25px;
     }
   }
 }
@@ -122,6 +155,10 @@
       margin-right: 25px;
       padding-left: 0;
     }
+
+    &--color {
+      padding-left: 83px;
+    }
   }
 
   &--user {
@@ -139,6 +176,14 @@
   border: 9px solid #ffffff;
   box-shadow: 0 0 0 2px #444444;
   border-radius: 50%;
+
+  &:hover {
+    box-shadow: 0 0 0 2px @green;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     width: 20px;
@@ -158,6 +203,14 @@
   height: 34px;
   border: 2px solid #444444;
 
+  &:hover {
+    border-color: @green;
+  }
+
+  &:active {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     width: 48px;
     height: 48px;
@@ -168,13 +221,18 @@
   display: block;
   width: 100%;
   padding: 18px 0 15px;
+  color: inherit;
   border: none;
   border-bottom: 2px solid @black;
   background-color: transparent;
 
+  &:hover {
+    border-color: @green;
+  }
+
   @media (min-width: @tablet-width) {
     .font(19px; 21px);
-    padding: 16px 16px 13px;
+    padding: 16px 18px 13px;
     box-sizing: border-box;
   }
 }
@@ -230,6 +288,7 @@
     width: 501px;
     margin-top: 0;
     margin-left: auto;
+    padding: 14px 15px 16px;
   }
 
   @media (min-width: @desktop-width) {

@@ -115,7 +115,7 @@
                   <a href="#">
                     <h2 class="product-card__title catalog-title">Зайчик-попрыгайчик</h2>
                   </a>
-                  <p class="product-card__description">Рост 30см, вес 200 г.</p>
+                  <p class="product-card__description">Рост 30 см, вес 200 г.</p>
                   <div class="product-card__inner">
                     <span class="product-card__price">1 200 руб.</span>
                     <a href="#" class="basket-link js-popup">
@@ -190,7 +190,14 @@
         <div class="video__wrapper">
           <h2 class="video__title catalog-title">Процесс производства</h2>
           <div class="video__source">
-            <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="Обложка видео">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Обложка видео">
+              </picture>
             <button class="video__button" type="button"></button>
           </div>
           <p class="video__description">

@@ -7,7 +7,6 @@
   font-weight: 700;
   text-transform: uppercase;
   color: @green;
-  background-color: #ffffff;
 
   &--color {
     margin-bottom: 25px;
@@ -235,9 +234,9 @@
 }
 
 .fieldset__input {
+  .font(17px; 46px);
   display: block;
   width: 100%;
-  padding: 18px 0 15px;
   color: inherit;
   border: none;
   border-bottom: 2px solid @black;
@@ -313,9 +312,9 @@
   }
 }
 
-.fieldset__textarea::placeholder,
 .fieldset__input::placeholder {
-  .font(17px; 18px);
+  font-size: 17px;
+  line-height: 46px;
   color: @black;
   opacity: 0.3;
 

@@ -3,9 +3,11 @@
   display: block;
   margin: 0;
   margin-bottom: 33px;
+  padding-right: 15px;
   font-weight: 700;
   text-transform: uppercase;
   color: @green;
+  background-color: #ffffff;
 
   &--color {
     margin-bottom: 25px;
@@ -17,6 +19,21 @@
 
   &--contacts {
     margin-bottom: 5px;
+  }
+
+  @media (max-width: @mobile-width) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 7px;
+      left: 0;
+      width: 260px;
+      height: 1px;
+      background-color: @green;
+      z-index: -100;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -192,7 +209,7 @@
   }
 }
 
-.fieldset__input:checked + .fieldset__radio-btn {
+.fieldset__input--hidden:checked + .fieldset__radio-btn {
   background-color: @green;
 }
 
@@ -237,7 +254,7 @@
   }
 }
 
-.fieldset__input:checked + .fieldset__checkbox {
+.fieldset__input--hidden:checked + .fieldset__checkbox {
   &::after {
     content: "";
     position: absolute;

@@ -1,5 +1,5 @@
 .button {
-  .font(17px; 20px);
+  .font(18px; 20px);
   font-family: inherit;
   display: block;
   padding: 15px 22px 13px;
@@ -10,4 +10,17 @@
   color: @grey;
   border: 2px solid @grey;
   background-color: #ffffff;
+
+  &:hover {
+    color: #ffffff;
+    background-color: @grey;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }

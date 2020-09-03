@@ -134,9 +134,19 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100px;
-  height: 77px;
+  width: 120px;
+  height: 100px;
   background: url("../img/icon-play.svg") no-repeat center;
+  background-size: 101px 77px;
   border: none;
   transform: translate(-50%, -50%);
+
+  &:hover {
+    background-size: 121px 92px;
+  }
+
+  &:active {
+    background-size: 81px 62px;
+    opacity: 0.3;
+  }
 }

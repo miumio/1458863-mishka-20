@@ -1,9 +1,9 @@
 .fieldset__legend {
   .font(17px; 16px);
-  display: block;
+  display: flex;
+  align-items: center;
   margin: 0;
   margin-bottom: 33px;
-  padding-right: 15px;
   font-weight: 700;
   text-transform: uppercase;
   color: @green;
@@ -21,17 +21,13 @@
   }
 
   @media (max-width: @mobile-width) {
-    position: relative;
-
     &::after {
-      position: absolute;
       content: "";
-      top: 7px;
-      left: 0;
-      width: 260px;
+      margin-left: 26px;
+      flex-grow: 1;
+      width: 130px;
       height: 1px;
       background-color: @green;
-      z-index: -100;
     }
   }
 

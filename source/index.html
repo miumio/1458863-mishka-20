@@ -15,14 +15,14 @@
         background-image: url( "img/320.png" );
       }
       /* Tablet */
-      @media ( min-width: 760px ) {
+      @media ( min-width: 768px ) {
         HTML {
           /* Tablet layout */
           background-image: url( "img/768.png" );
         }
       }
       /* Desktop */
-      @media ( min-width: 960px ) {
+      @media ( min-width: 1150px ) {
         HTML {
           /* Desktop layout */
           background-image: url( "img/1150.png" );
@@ -45,8 +45,8 @@
             </picture>
           </a>
         </div>
-        <nav class="page-header__nav page-header__nav--closed page-header__nav--nojs site-nav">
-          <button class="page-header__toggler" type="button">
+        <nav class="page-header__nav site-nav site-nav--nojs">
+          <button class="site-nav__toggler" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="site-nav__list site-nav__list--catalog">
@@ -124,7 +124,7 @@
           <table class="popular__details">
             <tr>
               <th>Цвет: </th>
-              <td>&quot;Тиффани&quot;/серый</td>
+              <td>&laquo;Тиффани&raquo;/серый</td>
             </tr>
             <tr>
               <th>Диаметр: </th>
@@ -203,7 +203,7 @@
             <dd>г. Санкт-Петербург, <br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</dd>
           </dl>
           <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253057016!2d30.32085335205239!3d59.938719168964724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595066260512!5m2!1sru!2sru" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          <a href="#" class="button">Напишите нам</a>
+          <a href="#" class="contacts__button button">Напишите нам</a>
         </div>
       </section>
       <footer class="page-footer">
@@ -249,10 +249,11 @@
         </div>
       </footer>
       <section class="modal">
-        <h3 class="modal__title">Добавить в корзину</h3>
-        <form class="modal__filter filter" action="http://echo.htmlacademy.ru" method="GET">
-          <fieldset class="filter__fieldset">
-            <legend class="filter__legend">Выберите размер:</legend>
+        <div class="modal__wrapper">
+          <h3 class="modal__title">Добавить в корзину</h3>
+          <form class="modal__filter filter" action="http://echo.htmlacademy.ru" method="GET">
+            <fieldset class="filter__fieldset">
+              <legend class="filter__legend">Выберите размер:</legend>
               <ul class="filter__list size-list">
                 <li>
                   <label>
@@ -273,11 +274,14 @@
                   </label>
                 </li>
               </ul>
-          </fieldset>
-          <button class="button filter__button" type="submit">Добавить</button>
-        </form>
+            </fieldset>
+            <button class="button filter__button" type="submit">Добавить</button>
+          </form>
+        </div>
+        <div class="modal__bg js-close"></div>
       </section>
     </main>
     <script src="js/nav.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

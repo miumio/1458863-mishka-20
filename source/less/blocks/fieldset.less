@@ -1,8 +1,9 @@
 .fieldset__legend {
   .font(17px; 16px);
-  display: block;
+  display: flex;
+  align-items: center;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   font-weight: 700;
   text-transform: uppercase;
   color: @green;
@@ -16,7 +17,21 @@
   }
 
   &--contacts {
-    margin-bottom: 5px;
+    margin-bottom: 11px;
+  }
+
+  &--msg {
+    margin-bottom: 22px;
+  }
+
+  @media (max-width: @mobile-width) {
+    &::after {
+      content: "";
+      margin-left: 26px;
+      flex: 1 0 176px;
+      height: 1px;
+      background-color: @green;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -28,6 +43,11 @@
 
     &--contacts {
       left: -170px;
+    }
+
+    &--user {
+      margin: 0;
+      top: 19px;
     }
   }
 
@@ -67,7 +87,39 @@
 }
 
 .fieldset__item {
+  position: relative;
   margin-bottom: 13px;
+
+  &--contacts {
+    margin-bottom: 37px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 14px;
+      right: 3px;
+      width: 32px;
+      height: 24px;
+      background-color: rgba(0, 0, 0, 0.3);
+
+      @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+        bottom: 16px;
+        right: 22px;
+      }
+    }
+
+    &:hover::after {
+      background-color: @green;
+    }
+  }
+
+  &--phone::after {
+    mask: url("../img/icon-phone.svg") no-repeat center;
+  }
+
+  &--email::after {
+    mask: url("../img/icon-mail.svg") no-repeat center;
+  }
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -82,10 +134,6 @@
     margin-bottom: 24px;
   }
 
-  &--contacts {
-    margin-bottom: 37px;
-  }
-
   @media (min-width: @tablet-width) {
     &--color {
       margin-bottom: 0;
@@ -98,7 +146,7 @@
     }
 
     &--contacts {
-      margin-bottom: 23px;
+      margin-bottom: 25px;
     }
   }
 }
@@ -122,11 +170,16 @@
       margin-right: 25px;
       padding-left: 0;
     }
+
+    &--color {
+      padding-left: 83px;
+    }
   }
 
   &--user {
     padding-left: 0;
     min-height: 10px;
+    margin-bottom: 6px;
   }
 }
 
@@ -140,6 +193,14 @@
   box-shadow: 0 0 0 2px #444444;
   border-radius: 50%;
 
+  &:hover {
+    box-shadow: 0 0 0 2px @green;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     width: 20px;
     height: 20px;
@@ -147,7 +208,7 @@
   }
 }
 
-.fieldset__input:checked + .fieldset__radio-btn {
+.fieldset__switch:checked + .fieldset__radio-btn {
   background-color: @green;
 }
 
@@ -158,6 +219,14 @@
   height: 34px;
   border: 2px solid #444444;
 
+  &:hover {
+    border-color: @green;
+  }
+
+  &:active {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     width: 48px;
     height: 48px;
@@ -165,21 +234,27 @@
 }
 
 .fieldset__input {
+  .font(17px; 40px);
   display: block;
   width: 100%;
-  padding: 18px 0 15px;
+  color: inherit;
   border: none;
   border-bottom: 2px solid @black;
   background-color: transparent;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: @green;
+  }
 
   @media (min-width: @tablet-width) {
     .font(19px; 21px);
-    padding: 16px 16px 13px;
+    padding: 16px 18px 13px;
     box-sizing: border-box;
   }
 }
 
-.fieldset__input:checked + .fieldset__checkbox {
+.fieldset__switch:checked + .fieldset__checkbox {
   &::after {
     content: "";
     position: absolute;
@@ -217,10 +292,9 @@
 
 .fieldset__textarea {
   display: block;
-  margin-top: -10px;
   padding: 15px;
   width: 100%;
-  .font(17px; 18px);
+  .font(17px; 19px);
   font-family: inherit;
   resize: none;
   border: 2px solid @black;
@@ -230,6 +304,7 @@
     width: 501px;
     margin-top: 0;
     margin-left: auto;
+    padding: 14px 15px 15px;
   }
 
   @media (min-width: @desktop-width) {
@@ -237,9 +312,17 @@
   }
 }
 
-.fieldset__textarea::placeholder,
+.fieldset__textarea::placeholder {
+  font-size: 17px;
+
+  @media (min-width: @tablet-width) {
+    .font(19px; 21px);
+  }
+}
+
 .fieldset__input::placeholder {
-  .font(17px; 18px);
+  font-size: 17px;
+  line-height: 46px;
   color: @black;
   opacity: 0.3;
 

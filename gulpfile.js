@@ -41,8 +41,10 @@ exports.styles = styles;
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(posthtml([include()]))
-    .pipe(gulp.dest("source"))
+    .pipe(gulp.dest("build"))
 }
+
+exports.html = html;
 
 //Images
 
@@ -99,9 +101,8 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
-  gulp.watch("source/*.html", gulp.series("html"));
-  gulp.watch("source/js/*.js", gulp.series("minjs"));
+  gulp.watch("source/*.html", gulp.series("html", "minify")).on("change", sync.reload);
+  gulp.watch("source/js/*.js", gulp.series("compress"));
 }
 
 exports.default = gulp.series(
@@ -158,10 +159,7 @@ exports.build = gulp.series(
   clean,
   copy,
   sprite,
-  images,
-  webpp,
   styles,
   html,
-  minify,
   compress
 );

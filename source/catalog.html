@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="preload" href="../fonts/opensans.woff2" as="font">
-    <link rel="preload" href="css/styles.min.css" as="style">
     <link href="css/styles.min.css" rel="stylesheet">
     <!-- Pixel Glass -->
     <style>
@@ -252,10 +251,11 @@
         </div>
       </footer>
       <section class="modal">
-        <h3 class="modal__title">Добавить в корзину</h3>
-        <form class="modal__filter filter" action="http://echo.htmlacademy.ru" method="GET">
-          <fieldset class="filter__fieldset">
-            <legend class="filter__legend">Выберите размер:</legend>
+        <div class="modal__wrapper">
+          <h3 class="modal__title">Добавить в корзину</h3>
+          <form class="modal__filter filter" action="http://echo.htmlacademy.ru" method="GET">
+            <fieldset class="filter__fieldset">
+              <legend class="filter__legend">Выберите размер:</legend>
               <ul class="filter__list size-list">
                 <li>
                   <label>
@@ -276,12 +276,13 @@
                   </label>
                 </li>
               </ul>
-          </fieldset>
-          <button class="button filter__button" type="submit">Добавить</button>
-        </form>
+            </fieldset>
+            <button class="button filter__button" type="submit">Добавить</button>
+          </form>
+        </div>
+        <div class="modal__bg js-close"></div>
       </section>
     </main>
-    <script src="js/nav.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

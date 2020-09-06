@@ -147,7 +147,7 @@ exports.minify = minify;
 const compress = () => {
   return gulp.src("source/js/*.js")
     .pipe(uglify())
-    .pipe(rename("script.min.js"))
+    .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build/js"))
 };
 

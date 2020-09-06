@@ -159,6 +159,8 @@ exports.build = gulp.series(
   clean,
   copy,
   sprite,
+  images,
+  webpp,
   styles,
   html,
   compress

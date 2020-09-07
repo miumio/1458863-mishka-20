@@ -13,6 +13,8 @@ const webp = require("gulp-webp");
 const del = require("del");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
+const htmlmin = require("gulp-htmlmin");
+const uglify = require('gulp-uglify');
 
 // Styles
 
@@ -42,6 +44,8 @@ const html = () => {
     .pipe(gulp.dest("build"))
 }
 
+exports.html = html;
+
 //Images
 
 const images = () => {
@@ -59,7 +63,7 @@ exports.images = images;
 //Webp
 
 const webpp = () => {
-  return gulp.src("source/img/*.{jpg,png}")
+  return gulp.src("build/img/*.{jpg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"))
 }
@@ -97,7 +101,8 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("build/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html", "minify")).on("change", sync.reload);
+  gulp.watch("source/js/*.js", gulp.series("compress"));
 }
 
 exports.default = gulp.series(
@@ -127,6 +132,26 @@ const clean = () => {
 
 exports.clean = clean;
 
+//HTMLmin
+
+const minify = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"))
+};
+
+exports.minify = minify;
+
+//Uglify
+
+const compress = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(rename({suffix: ".min"}))
+    .pipe(gulp.dest("build/js"))
+};
+
+exports.compress = compress;
 
 //Build
 
@@ -137,5 +162,6 @@ exports.build = gulp.series(
   images,
   webpp,
   styles,
-  html
+  html,
+  compress
 );

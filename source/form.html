@@ -5,7 +5,8 @@
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="../fonts/opensans.woff2" as="font">
+    <link href="css/styles.min.css" rel="stylesheet">
     <!-- Pixel Glass -->
     <style>
       HTML {
@@ -208,7 +209,7 @@
           </div>
           <div class="form__bg">
             <div class="form__fieldset form__fieldset--msg fieldset">
-              <label class="fieldset__legend">Доп</label>
+              <label class="fieldset__legend fieldset__legend--msg">Доп</label>
               <textarea class="fieldset__textarea" name="textfield" rows="6" id="textfield" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </div>
@@ -261,6 +262,6 @@
         </div>
       </footer>
     </main>
-    <!-- <script src="js/nav.js"></script> -->
+    <script src="js/nav.min.js"></script>
   </body>
 </html>

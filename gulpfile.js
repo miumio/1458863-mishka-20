@@ -14,7 +14,7 @@ const del = require("del");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 const htmlmin = require("gulp-htmlmin");
-const uglify = require('gulp-uglify');
+const uglify = require("gulp-uglify");
 
 // Styles
 
@@ -86,7 +86,7 @@ exports.sprite = sprite;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -104,10 +104,6 @@ const watcher = () => {
   gulp.watch("source/*.html", gulp.series("html", "minify")).on("change", sync.reload);
   gulp.watch("source/js/*.js", gulp.series("compress"));
 }
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
 
 //Copy
 
@@ -155,7 +151,7 @@ exports.compress = compress;
 
 //Build
 
-exports.build = gulp.series(
+const build = gulp.series(
   clean,
   copy,
   sprite,
@@ -164,4 +160,10 @@ exports.build = gulp.series(
   styles,
   html,
   compress
+);
+
+exports.build = build;
+
+exports.default = gulp.series(
+  build, server, watcher
 );

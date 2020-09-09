@@ -41,6 +41,7 @@ exports.styles = styles;
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(posthtml([include()]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
 }
 
@@ -101,7 +102,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series("html", "minify")).on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
   gulp.watch("source/js/*.js", gulp.series("compress"));
 }
 
@@ -127,16 +128,6 @@ const clean = () => {
 };
 
 exports.clean = clean;
-
-//HTMLmin
-
-const minify = () => {
-  return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"))
-};
-
-exports.minify = minify;
 
 //Uglify
 
